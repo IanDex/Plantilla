@@ -1,0 +1,99 @@
+.validar{
+    background-color: rgba(240,130,95,.2);
+    border-color: #d7dee5;
+}
+
+.error{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.custom-select:focus {
+    border-color: #d7dee5;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+}
+
+input:focus,input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
+    .uneditable-input:focus {   
+    background-color: transparent;
+    border-color: #d7dee5;
+}
+
+.textarea:focus{
+    background-color: transparent;
+    border-color: #d7dee5;
+}
+
+#desc-gen:focus{
+    background-color: transparent;
+    border-color: #d7dee5;
+}
+@media (min-width: 768px){
+.page-body .page-content-wrapper {
+    min-height: 89vh;   
+    padding: 1.5rem 2.5rem calc(-20px + 1.5rem);
+    }
+}
+
+@media (max-width: 970px){
+    .boton {
+        margin-top: 20px
+        }
+    }
+    
+.desc-gen{
+    margin-bottom: 0px;
+}
+
+.btn, .fc-button {
+    height: 100%;
+    max-height: 100%;
+    padding: 5px 20px;
+}
+
+
+.snackbar {
+    background: #323232;
+    color: white;
+    padding: 1em;
+    border-radius: 0.25em;
+    line-height: 1em;
+    position: fixed;
+    bottom: 1.5em;
+    left: 1.5em;
+    z-index: 99;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  }
+  .snackbar a {
+    padding-left: 2em;
+  }
+
+.a {
+    color: #007bed;
+    text-decoration: none;
+    font-weight: bold;
+}
+.a:hover,
+.a:focus {
+    color: #159bff;
+}
+.a:active {
+    color: #3d5afe;
+}
+  

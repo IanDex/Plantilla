@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="depto" id="depto"></select>
+    <select name="muni" id="muni">
+        <option>Ciudad</option>
+    </select>
+    <script src="../vendors/js/core.js"></script>
+    <script>
+    var js = {
+        "Amazonas":["El Encanto","La Chorrera","La Pedrera","La Victoria","Leticia","Miriti Paraná","Puerto Alegría","Puerto Arica","Puerto Nariño","Puerto Santander","Tarapacá"],
+  "Antioquia":["Abejorral","Abriaquí","Alejandría","Amagá","Amalfi","Andes","Angelópolis","Angostura","Anorí","Anza","Apartadó","Arboletes","Argelia","Armenia","Barbosa","Bello","Belmira","Betania","Betulia","Briceño","Buriticá","Cáceres","Caicedo","Caldas","Campamento","Cañasgordas","Caracolí","Caramanta","Carepa","Carolina","Caucasia","Chigorodó","Cisneros","Ciudad Bolívar","Cocorná","Concepción","Concordia","Copacabana","Dabeiba","Don Matías","Ebéjico","El Bagre","El Carmen de Viboral","El Santuario","Entrerrios","Envigado","Fredonia","Frontino","Giraldo","Girardota","Gómez Plata","Granada","Guadalupe","Guarne","Guatapé","Heliconia","Hispania","Itagui","Ituango","Jardín","Jericó","La Ceja","La Estrella","La Pintada","La Unión","Liborina","Maceo","Marinilla","Medellín","Montebello","Murindó","Mutatá","Nariño","Nechí","Necoclí","Olaya","Peñol","Peque","Pueblorrico","Puerto Berrío","Puerto Nare","Puerto Triunfo","Remedios","Retiro","Rionegro","Sabanalarga","Sabaneta","Salgar","San Andrés de Cue"],
+  "Arauca":["Arauca","Arauquita","Cravo Norte","Fortul","Puerto Rondón","Saravena","Tame"],
+    };
+    $("#depto").empty(); 
+    $("#depto").append('<option disabled selected>Departamento</option>');
+            $.each(js, function(key, value) {
+                console.log(key + " " + "value");
+               
+                $("#depto").append('<option value="' + key + '">' + key + '</option>');
+            }); // close each()
+            
+            $("#depto").change(function (e) { 
+                e.preventDefault();
+                $("#muni").empty();
+                $("#muni").append('<option disabled selected>Ciudad</option>');
+                    $.each(js, function(key, value) {
+                    console.log($("#depto").val() + " key" + " " + value);
+                    if (key.toLowerCase() == $("#depto").val().toLowerCase()) {
+                        city = (value.toString()).split(",");
+                        $.each(city, function(key, value) {
+                            $("#muni").append('<option value="' + value + '">' + value + '</option>');    
+                        });
+                    }
+                    
+                 }); // close each()
+            });
+    </script>
+</body>
+</html>
